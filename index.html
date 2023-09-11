@@ -1,70 +1,66 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/index.css" />
+    <title>Gangas Móviles</title>
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/index.css">
-    <title>Gangas Moviles</title>
-</head>
-
-<body>
+  <body>
     <header>
-        <h1>Gangas Moviles</h1>
-        <div class="search-form">
-            <input type="text" class="search-input" placeholder="Buscar...">
-            <button class="search-button">Buscar</button>
-        </div>
-
+      <h1>Gangas Móviles</h1>
+      <div class="search-form">
+        <input type="text" class="search-input" placeholder="Buscar..." />
+        <button class="search-button">Buscar</button>
+      </div>
     </header>
 
     <nav>
-        <ul>
-            <li><a href="/">Inicio</a></li>
-            <li><a href="/html/quienes_somos.html">Quienes somos</a></li>
-            <li><a href="/html/contactanos.html">Contactanos</a></li>
-        </ul>
-        <ul>
-            <li class="login"><a href="/html/form.html">Ingresar</a></li>
-            <li class="login"><a href="/html/form.html">Registrarse</a></li>
-        </ul>
+      <ul>
+        <li><a href="/">Inicio</a></li>
+        <li><a href="/html/quienes_somos.html">Quiénes somos</a></li>
+        <li><a href="/html/contactanos.html">Contáctanos</a></li>
+      </ul>
+      <ul>
+        <li class="login"><a href="/html/form.html">Ingresar</a></li>
+        <li class="login"><a href="/html/form.html">Registrarse</a></li>
+      </ul>
     </nav>
 
-    <div class="slider">
-
-        <h1>slider</h1>
-        <div>
-            <img src="#" alt="Foto 1">
-        </div>
-        <div>
-            <img src="#" alt="Foto 2">
-        </div>
-        <div>
-            <img src="#" alt="Foto 3">
-        </div>
+    <div class="slider-container">
+      <div class="slider">
+        <img src="./img/celulares-slider1.jpg" alt="Foto 1" />
+        <img src="./img/celulares-slider2.jpeg" alt="Foto 2" />
+        <img src="./img/celulares-slider3.webp" alt="Foto 3" />
+      </div>
+      <button id="prevBtn" onclick="prevSlide()"><</button>
+      <button id="nextBtn" onclick="nextSlide()">></button>
     </div>
+
     <main>
-        <section>
-            <h2>Sección 1</h2>
-            <article>
-                <h3>Artículo 1</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </article>
-            <article>
-                <h3>Artículo 2</h3>
-                <p>Nulla facilisi. Sed nec erat ut mi volutpat fringilla.</p>
-            </article>
-        </section>
-        <img src="#" alt="Foto">
+      <section>
+        <h2>Sección 1</h2>
+        <article>
+          <h3>Artículo 1</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </article>
+        <article>
+          <h3>Artículo 2</h3>
+          <p>Nulla facilisi. Sed nec erat ut mi volutpat fringilla.</p>
+        </article>
+      </section>
+      <img src="#" alt="Foto" />
     </main>
     <aside>
-        <h2>Aside</h2>
-        <p>Contenido del aside...</p>
+      <h2>Aside</h2>
+      <p>Contenido del aside...</p>
     </aside>
 
     <footer>
-        <p>Pie de página &copy; 2023</p>
+      <p>Pie de página &copy; 2023</p>
     </footer>
-</body>
 
+    <script src="/javascript/slider.js"></script>
+  </body>
 </html>

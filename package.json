@@ -1,0 +1,20 @@
+{
+  "name": "primera-entrega-digitalers",
+  "version": "1.0.0",
+  "description": "gangas moviles",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Al3xisFernandez/GangasMoviles.git"
+  },
+  "author": "Alexis Fernandez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Al3xisFernandez/GangasMoviles/issues"
+  },
+  "homepage": "https://github.com/Al3xisFernandez/GangasMoviles#readme"
+}
