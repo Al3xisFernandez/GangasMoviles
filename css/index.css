@@ -8,7 +8,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #E6F7FF;
+    background: linear-gradient(135deg, #FFA500, #D2691E);
 }
 
 header,
@@ -90,14 +90,6 @@ ul:last-child li {
     margin-left: 20px;
 }
 
-.slider {
-    display: flex;
-    justify-content: space-around;
-    padding: 100px;
-    border: 1px solid #ccc;
-
-}
-
 main {
     display: flex;
 }
@@ -127,11 +119,28 @@ main>img {
 }
 
 .slider img {
-    display: none;
     width: 100%;
     height: 100%;
     object-fit: contain;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
 }
+
+.slider img.active {
+    opacity: 1;
+}
+
+#prevBtn,
+#nextBtn {
+    transition: transform 0.2s ease-in-out, opacity 0.2ss ease-in-out;
+}
+
+#prevBtn:hover,
+#nextBtn:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
 
 button {
     color: #8b8686;
@@ -197,4 +206,81 @@ header h1 {
     100% {
         transform: scale(1);
     }
+}
+
+.search-form {
+    max-width: 300px;
+    background-color: #f2f2f2;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+.search-button {
+    background-color: orange;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-button:hover {
+    background-color: orangered;
+}
+
+.search-input:focus,
+.search-button:focus {
+    outline: none;
+    border: 1px solid orange;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+nav {
+    background-color: #333;
+    /* Cambia el color de fondo según tu diseño */
+}
+
+nav a {
+    color: #fff;
+    /* Color de los enlaces */
+    text-decoration: none;
+    /* Elimina la subraya de los enlaces */
+}
+
+nav a:hover {
+    color: #ff9900;
+    /* Color de los enlaces al pasar el mouse sobre ellos */
+}
+
+nav ul {
+    list-style: none;
+    /* Elimina las viñetas de lista */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    /* Alinea los elementos horizontalmente */
+    justify-content: space-between;
+    /* Distribuye los elementos uniformemente */
+}
+
+nav li {
+    margin-right: 20px;
+    /* Espaciado entre elementos de la lista */
+}
+
+nav .login a {
+    color: #ff9900;
+    /* Cambia el color de los enlaces de inicio de sesión */
+    font-weight: bold;
+    /* Hace que los enlaces de inicio de sesión sean más prominentes */
+    /* Otros estilos específicos para los enlaces de inicio de sesión */
 }
