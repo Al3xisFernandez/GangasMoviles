@@ -8,8 +8,60 @@
 
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #FFA500, #D2691E);
+    background: linear-gradient(-270deg, #FFA500, #3498db);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s linear infinite, backgroundMove 10s linear infinite, parallaxBackground 10s linear infinite;
 }
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes backgroundMove {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 100% 0;
+    }
+}
+
+@keyframes parallaxBackground {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    100% {
+        background-position: 100% 0%;
+    }
+}
+
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 
 header,
 nav,
@@ -107,51 +159,52 @@ main>img {
 
 .slider-container {
     position: relative;
-    margin: 20px auto;
-    width: 80%;
-    max-width: 800px;
-    text-align: center;
+    max-width: 1000px;
+    max-height: 500px;
+    margin: 0 auto;
 }
 
 .slider {
     display: flex;
-    overflow: hidden;
+    justify-content: center;
+    transition: transform 0.3s ease;
 }
 
-.slider img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+.slide {
+    flex: 100% 100% 100%;
     opacity: 0;
-    transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.3s ease;
 }
 
-.slider img.active {
+.slide.active {
     opacity: 1;
 }
 
-#prevBtn,
-#nextBtn {
-    transition: transform 0.2s ease-in-out, opacity 0.2ss ease-in-out;
-}
-
-#prevBtn:hover,
-#nextBtn:hover {
-    transform: scale(1.1);
-    opacity: 0.8;
+.slide img {
+    width: 400px; 
+    height: 400px;
+    object-fit: cover;
 }
 
 
-button {
-    color: #8b8686;
-    margin: 10px;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border: none;
+.slider-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.prev-button,
+.next-button {
+    padding: 15px 30px;
     background: none;
-
+    color: white;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    margin: 0 10px;
 }
+
+
 
 header {
     background-color: #333;
@@ -230,6 +283,7 @@ header h1 {
     border: none;
     border-radius: 3px;
     cursor: pointer;
+    font-weight: bold;
     transition: background-color 0.3s;
 }
 
@@ -246,41 +300,79 @@ header h1 {
 
 nav {
     background-color: #333;
-    /* Cambia el color de fondo según tu diseño */
 }
 
 nav a {
     color: #fff;
-    /* Color de los enlaces */
     text-decoration: none;
-    /* Elimina la subraya de los enlaces */
+    font-weight: bold;
+
 }
 
 nav a:hover {
     color: #ff9900;
-    /* Color de los enlaces al pasar el mouse sobre ellos */
 }
 
 nav ul {
     list-style: none;
-    /* Elimina las viñetas de lista */
     padding: 0;
     margin: 0;
     display: flex;
-    /* Alinea los elementos horizontalmente */
     justify-content: space-between;
-    /* Distribuye los elementos uniformemente */
 }
 
 nav li {
     margin-right: 20px;
-    /* Espaciado entre elementos de la lista */
 }
 
 nav .login a {
     color: #ff9900;
-    /* Cambia el color de los enlaces de inicio de sesión */
     font-weight: bold;
-    /* Hace que los enlaces de inicio de sesión sean más prominentes */
-    /* Otros estilos específicos para los enlaces de inicio de sesión */
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.footer-social {
+    font-size: 24px;
+}
+
+.footer-social a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 20px;
 }
